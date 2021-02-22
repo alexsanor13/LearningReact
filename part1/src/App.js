@@ -1,9 +1,6 @@
 import './App.css';
 import Mensaje from './Mensaje.js'
-
-const Detalles = () => {
-  return <div>Detalles cositasss</div>
-}
+import Detalles from './Detalles.js'
 
 const App = () => {
   return (
@@ -12,7 +9,7 @@ const App = () => {
       <Mensaje color='yellow' msg='tamo trabajando'/>
       <Mensaje color='green' msg='full energia'/>
       <Mensaje color='grey' msg='peña'/>
-      <Detalles />
+      <Detalles color='purple' />
     </div>
   )
 }
