@@ -13,7 +13,7 @@ const persona = {
 const field = 'name'
 console.log(persona[field]) // Forma dinámica
 
-const sum = (a,b) =>{
+const sum = (a, b) =>{
     console.log(a)
     console.log(b)
     return a + b 
@@ -26,5 +26,18 @@ function restar (a, b) {
     return a + b
 }
 
-console.log(2 == '2') // true
-console.log(2 === '2') // false
+// console.log(2 == '2') // true
+// console.log(2 === '2') // false
+
+const t = [10 ,11 ,12 , [5, 6, 7]]
+
+t.forEach(element => {
+    if(element.length > 1){
+        element.forEach(n => {
+            console.log(n + ' uea')    
+        });
+    }
+    else{
+        console.log(element)
+    }
+});
