@@ -11,7 +11,7 @@ const App = () => {
       <Mensaje color='red' msg='tamo en ello'/>
       <Mensaje color='yellow' msg='tamo trabajando'/>
       <Mensaje color='green' msg='full energia'/>
-      <Mensaje color='blue' msg='peña'/>
+      <Mensaje color='grey' msg='peña'/>
       <Detalles />
     </div>
   )
