@@ -1,0 +1,6 @@
+alex sanchez  monitor  200  2
+alex sanchez  teclado  130  1
+alex sanchez  raton  60  1
+anna solano  mario galaxy  60  1
+anna solano  animal crossing  60  1
+raquel sanchez  chocolate  2  100
