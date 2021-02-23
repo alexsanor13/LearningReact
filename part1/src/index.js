@@ -5,16 +5,10 @@ import './index.css';
 const rootElement = document.getElementById('root');
 
 
-const App = () => {
-    return (
-      <div>
-        Hola hola caracola
-      </div>  
-    );
-  };
+const App = ({color, numero}) => <div style={{color:color}}>Hola hola caracola {numero}</div>
 
 ReactDOM.render(
-      <App  />,
+      <App  color='blue' numero={3}/>,
       rootElement
     );
 

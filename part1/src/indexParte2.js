@@ -11,7 +11,7 @@ const INITIAL_COUNTER_STATE = {
   mensaje : 'Click para contar'
 }
 
-const App = (props) => {
+const App = () => {
     const [counters, setCounters] = useState(INITIAL_COUNTER_STATE);
 
     const [clicks, setClicks] = useState([]);

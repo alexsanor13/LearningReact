@@ -7,7 +7,7 @@ import {useState} from 'react'
 
 const rootElement = document.getElementById('root');
 
-const App = (props) => {
+const App = () => {
     const [contador, setContador] = useState(0);
 
     const handleClick = (num) => {
