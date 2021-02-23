@@ -1,14 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App.js'
 
-const rootElement = document.getElementById('root');
-
-
-const App = ({color, numero}) => <div style={{color:color}}>Hola hola caracola {numero}</div>
 
 ReactDOM.render(
-      <App  color='blue' numero={3}/>,
-      rootElement
-    );
-
+  <App />,
+  document.getElementById('root')
+)
