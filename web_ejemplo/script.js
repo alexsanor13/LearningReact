@@ -98,19 +98,61 @@
 
 /*---------Currying----------*/
 
-let perro = (name,size,color) => 
-    name + " is a " +
-    size + " " +
-    color + " dog."
-    
-console.log(perro("pedrito", "big", "brown"))
+// let perro = (name,size,color) => 
+//     name + " is a " +
+//     size + " " +
+//     color + " dog."
 
-let gato = 
-    name => 
-        size => 
-            color => 
-                name + " is a " + 
-                size + " " + 
-                color + " cat."
+// console.log(perro("pedrito", "big", "brown"))
 
-console.log(gato("stitch")("tiny")("grey"))
+// let gato = 
+//     name => 
+//         size => 
+//             color => 
+//                 name + " is a " + 
+//                 size + " " + 
+//                 color + " cat."
+
+// console.log(gato("stitch")("tiny")("grey"))
+
+
+
+/*--------Recursion----------*/
+
+// let countDown = (num) => {
+//     console.log(num)
+//     if(num !== 0){
+//         countDown(num-1)
+//     }
+// }
+
+// countDown(10)
+
+
+// let categories = [
+//     { id: 'animals', parent : null},
+//     { id: 'mammals', parent : 'animals'},
+//     { id: 'birds', parent : 'animals'},
+//     { id: 'fishes', parent : 'animals'},
+//     { id: 'dog', parent : 'mammals'},
+//     { id: 'cat', parent : 'mammals'},
+//     { id: 'persian', parent : 'cat'},
+//     { id: 'labrador', parent : 'dog'},
+//     { id: 'pastor', parent : 'dog'},
+//     { id: 'eagle', parent : 'birds'},
+//     { id: 'tune', parent : 'fishes'},
+// ]
+
+// let makeTree = (categories, parent) => {
+//     let node = {}
+//     categories
+//         .filter(c => c.parent === parent)
+//         .forEach(c => node[c.id] = makeTree(categories, c.id))
+//         return node
+// }
+
+// console.log(JSON.stringify(makeTree(categories,null), null, 4))
+
+
+
+
