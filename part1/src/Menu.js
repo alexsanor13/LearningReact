@@ -11,10 +11,10 @@ const MAX_NUMBER = 999999999;
 const MIN_NUMBER = 100000000;
 const MAX_LENGTH = 40;
 
-const Menu = ({contactList}) => {
+const Menu = ({contacts}) => {
     const [filter, setFilter] = useState(INITIAL_CONTACT)
     const [contact, setContact] = useState(INITIAL_CONTACT)
-    const [contacts, setContacts] = useState(contactList)
+    const [contactsList, setContactsList] = useState(contacts)
 
     const handleFilterByName = (event) => {
         console.log('se filtra el nombre con: ' + event.target.value)
@@ -53,11 +53,10 @@ const Menu = ({contactList}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(contact)
+        setContactsList([...contactsList, contact])
+        console.log(contactsList)
         setContact(INITIAL_CONTACT)
         
-        // return <Contactos contactList = {contactList} newContact = {contact} />
-
     }
 
     return (
