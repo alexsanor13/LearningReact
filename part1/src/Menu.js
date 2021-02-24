@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import Contacto from './Contacto.js'
 
 const INITIAL_CONTACT = {
+    id: 0,
     name: '',
     number: 100000000
 };
@@ -53,9 +54,9 @@ const Menu = ({contacts}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        contact.id = contactsList.length +1
         if(contact.name !== '' && contact.number !== MIN_NUMBER) {
             setContactsList([...contactsList, contact])
-            console.log(contactsList)
             setContact(INITIAL_CONTACT)
         }
     }
@@ -87,7 +88,7 @@ const Menu = ({contacts}) => {
             <ul>
             {contactsList
                 .map(c => (
-                <Contacto key={c.number} {...c}></Contacto> 
+                <Contacto key={c.id} {...c}></Contacto> 
                 ))}
             </ul>
         </div>
