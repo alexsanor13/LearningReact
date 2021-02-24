@@ -155,4 +155,19 @@
 
 
 
+const fs = require('fs')
 
+let output = fs.readFileSync('contacts.txt','utf8')
+    .trim()
+    .split(/\r?\n|\r/g)
+    .map(line => line.split('  '))
+    .reduce((contacts, line) => {
+        let newContact = {
+            name: line[0],
+            number: line[1]
+        }
+        contacts.push(newContact)
+        return contacts
+    }, [])
+    console.log(output)
+    
