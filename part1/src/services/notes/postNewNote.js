@@ -1,10 +1,7 @@
 import axios from 'axios'
 
-export const postNewNote = (noteToState) => {
-    return axios
-            .post('https://jsonplaceholder.typicode.com/posts', noteToState)
-            .then(response => {
-            const {data} = response
-            return data;
-    })
+export const postNewNote = async (noteToState) => {
+    const response = await axios.post('https://jsonplaceholder.typicode.com/posts', noteToState);
+    const { data } = response;
+    return data;
 }
