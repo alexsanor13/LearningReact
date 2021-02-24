@@ -11,7 +11,7 @@ const contacts =[
   { name: 'aleks sanchete', number: 124589345 },
   { name: 'ales sanchurron', number: 101010101 },
   { name: 'hola', number: 112412414 },
-  { name: 'hola', number: 112412414 }
+  { name: 'hola', number: 112412415 }
 ]
 
 export default function App() {
