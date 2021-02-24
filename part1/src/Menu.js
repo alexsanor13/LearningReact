@@ -1,6 +1,6 @@
 import './Menu.css';
 import {useState} from 'react'
-import Contactos from 'Contactos.js'
+// import Contactos from 'Contactos.js'
 
 const INITIAL_CONTACT = {
     name: '',
