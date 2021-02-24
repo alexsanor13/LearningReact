@@ -56,7 +56,6 @@ const Menu = ({contacts}) => {
         setContactsList([...contactsList, contact])
         console.log(contactsList)
         setContact(INITIAL_CONTACT)
-        
     }
 
     return (
