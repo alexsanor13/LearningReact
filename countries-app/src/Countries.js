@@ -23,21 +23,21 @@ const Countries = ({filter}) => {
     return (
     <div id='countriesList'>
         {countriesList.length <= 20 && countriesList.length > 1 ? 
-        clicked === false ? 
-        <ul>
-            {countriesList.map(country => (
-                <li className="list-country-element" key={country.numericCode}>
-                    {country.name}
-                    <button className='button-show' onClick={() => handleClick(country)}>
-                        show
-                    </button>
-                </li>))
-            }
-        </ul>
-        : <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/> 
+            clicked === false ? 
+            <ul>
+                {countriesList.map(country => (
+                    <li className="list-country-element" key={country.numericCode}>
+                        {country.name}
+                        <button className='button-show' onClick={() => handleClick(country)}>
+                            show
+                        </button>
+                    </li>))
+                }
+            </ul>
+            : <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/> 
         : (countriesList.length === 1 ? 
             <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/>
-            : 'Too many matches, specify another filter')}
+            : countriesList.length === 0 ? 'No results':'Too many matches, specify another filter')}
     </div>
     );
 }
