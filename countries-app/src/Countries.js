@@ -21,7 +21,7 @@ const Countries = ({filter}) => {
 
     return (
     <div id='countriesList'>
-        {countriesList.length <= 20 && countriesList.length > 1 ? 
+        {countriesList.length < 15 && countriesList.length > 1 ? 
             clicked === false ? 
             <ul>
                 {countriesList.map(country => (
@@ -30,6 +30,7 @@ const Countries = ({filter}) => {
                         <button className='button-show' onClick={() => handleClick(country)}>
                             show
                         </button>
+                        <hr/>
                     </li>))
                 }
             </ul>
