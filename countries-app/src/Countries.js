@@ -8,7 +8,6 @@ const Countries = ({filter}) => {
     const [clicked, setClicked] = useState(false)
     
     useEffect(() => {
-        console.log('se buscan países')
         getAllCountries(filter).then(countriesFiltered => {
             setCountriesList(countriesFiltered)
             setClicked(false)
@@ -19,7 +18,7 @@ const Countries = ({filter}) => {
         setClicked(true)
         setCountriesList([country])
     }
-    
+
     return (
     <div id='countriesList'>
         {countriesList.length <= 20 && countriesList.length > 1 ? 
@@ -34,9 +33,13 @@ const Countries = ({filter}) => {
                     </li>))
                 }
             </ul>
-            : <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/> 
+            : <div>
+                <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/> 
+            </div>
         : (countriesList.length === 1 ? 
-            <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/>
+                <div>
+                    <CountryDetails key={countriesList[0].numericCode} country={countriesList[0]}/>
+                </div>
             : countriesList.length === 0 ? 'No results':'Too many matches, specify another filter')}
     </div>
     );
