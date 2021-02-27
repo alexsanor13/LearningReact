@@ -1,7 +1,11 @@
 const express = require('express')
+const cors = require('cors')
+
 const app = express()
 const logger = require('./loggerMiddleware')
 
+// Por defecto configura que cualquier origen puede acceder a la api
+app.use(cors())
 app.use(express.json())
 
 app.use(logger)
