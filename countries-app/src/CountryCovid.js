@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getCountryData } from './services/CovidService.js'
 
 const API_KEY = process.env.REACT_APP_COVID_API_KEY;
 
-const CountryCovid = ({country}) => {
+const CountryCovid = ({country, countryCode}) => {
     const [covidData, setCovidData] = useState()
 
     useEffect(() => {
-        getCountryData(country, API_KEY).then(data => {
+        getCountryData(countryCode, API_KEY).then(data => {
             setCovidData(data);
         });
       }, [country])

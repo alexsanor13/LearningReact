@@ -1,7 +1,7 @@
 import './CountryDetails.css'
 import CountryWeather from './CountryWeather'
 import CountryCovid from './CountryCovid'
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const CountryDetails = ({country}) => {
     const [clickedCov, setClickedCov] = useState(false)
@@ -35,7 +35,7 @@ const CountryDetails = ({country}) => {
             <br/>
             {clickedCov !== true ? 
                 <button onClick={() => handleClickCov()}>show covid results</button> 
-                : <CountryCovid key={country.name} country={country.name} />
+                : <CountryCovid key={country.numericCode} country={country.name} countryCode={country.alpha2Code} />
             }
         </div>  
     )

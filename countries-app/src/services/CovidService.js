@@ -1,19 +1,22 @@
 import axios from 'axios'
 
-export const getCountryData = async (country,key) => {
-    const options = {
-        method: 'GET',
-        url: 'https://covid-19-data.p.rapidapi.com/country',
-        params: {name: country},
-        headers: {
-          'x-rapidapi-key': key,
-          'x-rapidapi-host': 'covid-19-data.p.rapidapi.com'
-        }
-      };
-
-    if (country !== '') {
-        let response = await axios.request(options)
-        return response.data[0];
+export const getCountryData = async (countryCode,key) => {
+  const options = {
+    method: 'GET',
+    url: 'https://covid19-data.p.rapidapi.com/',
+    params: {countrycode: countryCode},
+    headers: {
+      'X-RapidAPI-Host': 'covid19-data.p.rapidapi.com',
+      'X-RapidAPI-Key': key
     }
-    return undefined;
+  };
+
+  if (countryCode !== '') {
+    axios.request(options).then(function (response) {
+      return response.data[0];
+    }).catch(function (error) {
+      console.error(error);
+    });
+  }
+  return undefined;
 }

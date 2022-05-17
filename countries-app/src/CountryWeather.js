@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {getCountryWeather} from './services/WeatherService.js'
 import './CountryWeather.css'
 
@@ -8,9 +8,12 @@ const CountryWeather = ({city}) => {
     const [weather, setWeather] = useState()
 
     useEffect(() => {
-        getCountryWeather(city, API_KEY).then(weather => {
-            setWeather(weather)
-        });
+        let response = getCountryWeather(city, API_KEY)
+        if (response !== undefined) {
+            response.then(weather => {
+                setWeather(weather)
+            })
+        }
       }, [city])
 
     return (

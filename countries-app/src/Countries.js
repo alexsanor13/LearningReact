@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { getAllCountries } from './services/CountriesService';
 import CountryDetails from './CountryDetails.js'
 import './Countries.css'
